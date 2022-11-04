@@ -7,7 +7,9 @@ let creditLimit = 5000;
  * If creditLimit is less than the requested amount, only the remaining limit is loaned out, otherwise the full amount is loaned out. If $0 remain in the limit, the loan request is rejected (error!).
  */
 const loanOut = function (amount) {
-
+  return new Promise((resolve, reject) => {
+    resolve(amount)
+  });
 };
 
 console.log("Asking for $150, which should be okay ...");
