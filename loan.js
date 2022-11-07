@@ -8,6 +8,10 @@ let creditLimit = 5000;
  */
 const loanOut = function (amount) {
   return new Promise((resolve, reject) => {
+    if (creditLimit <= 0) {
+      reject("Insuffecient funds");
+    }
+    else { creditLimit -= amount }
     resolve(amount)
   });
 };
